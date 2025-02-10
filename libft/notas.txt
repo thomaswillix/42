@@ -1,7 +1,4 @@
 Faltan estos:
 
-	• strncmp
-	• memchr
-	• memcmp
 	• strnstr
 	• atoi
