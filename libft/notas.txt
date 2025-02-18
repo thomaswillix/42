@@ -1,4 +1,6 @@
-Faltan estos:
+Falta esto:
 
-	• strnstr
-	• atoi
+	• mirar calloc y su comportamiento para fiarme de lo que tengo escrito
+
+Me he quedado en esta:
+	• ft_strtrim.c 
