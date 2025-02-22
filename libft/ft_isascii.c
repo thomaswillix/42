@@ -6,13 +6,13 @@
 /*   By: tfreitas <tfreitas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 11:23:10 by tfreitas          #+#    #+#             */
-/*   Updated: 2025/02/09 12:22:12 by tfreitas         ###   ########.fr       */
+/*   Updated: 2025/02/14 10:33:32 by tfreitas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isascii(char c)
+int		ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127)
 }
