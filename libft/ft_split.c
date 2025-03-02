@@ -1,32 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfreitas <tfreitas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/09 21:57:33 by tfreitas          #+#    #+#             */
-/*   Updated: 2025/03/02 21:50:17 by tfreitas         ###   ########.fr       */
+/*   Created: 2025/03/02 12:29:20 by tfreitas          #+#    #+#             */
+/*   Updated: 2025/03/02 16:08:46 by tfreitas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int search_str)
+char **ft_split(char const *s, char c);
+static int num_elements(const char *s, char c);
+
+char	**ft_split(char const *s, char c)
 {
-	size_t str_len;
-	str_len = ft_strlen(str);
+	char**	str;
+	int	num;
 
-	// Si buscamos el carácter nulo '\0'
-    if (search_str == '\0')
-        return (char *)str + str_len;
+	num = num_elements(s, c);
+	str = malloc()
+}
 
-	while(str_len > 0)
-	{
-		if(str[str_len - 1] == search_str)
-			return (char *)str + str_len - 1;
-		str_len--;
-	}
-	
-    return NULL;  // Si no se encuentra el carácter
+static int num_elements(const char *str, char c)
+{
+    int i;
+    int	num;
+
+    i = 0;
+    num = 1;
+    while (str[i + 1])
+    {
+        if (c == set[i] && c != set[i+1])
+		num++;
+	i++;
+    }
+    return (num);
 }

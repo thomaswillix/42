@@ -6,13 +6,13 @@
 /*   By: tfreitas <tfreitas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 21:50:06 by tfreitas          #+#    #+#             */
-/*   Updated: 2025/02/09 21:56:52 by tfreitas         ###   ########.fr       */
+/*   Updated: 2025/03/02 21:19:24 by tfreitas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strchr(const char *str, int search_str)
+char	*ft_strchr(const char *str, int search_str)
 {
 	while(*str)
 	{

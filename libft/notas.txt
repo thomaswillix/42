@@ -2,5 +2,8 @@ Falta esto:
 
 	• mirar calloc y su comportamiento para fiarme de lo que tengo escrito
 
-Me he quedado en esta:
-	• ft_strtrim.c 
+Me quedan estos:
+	• ft_split.c
+	• ft_itoa.c 
+	• ft_strieri.c 
+	• ft_strmapi

@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfreitas <tfreitas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/09 21:57:33 by tfreitas          #+#    #+#             */
-/*   Updated: 2025/03/02 21:50:17 by tfreitas         ###   ########.fr       */
+/*   Created: 2025/03/02 16:16:51 by tfreitas          #+#    #+#             */
+/*   Updated: 2025/03/02 19:35:04 by tfreitas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
-char	*ft_strrchr(const char *str, int search_str)
+void ft_putstr_fd(char *s, int fd);
+
+void ft_putstr_fd(char *s, int fd)
 {
-	size_t str_len;
-	str_len = ft_strlen(str);
+	int	i;
 
-	// Si buscamos el carácter nulo '\0'
-    if (search_str == '\0')
-        return (char *)str + str_len;
-
-	while(str_len > 0)
+	i = 0;
+	while (s[i])
 	{
-		if(str[str_len - 1] == search_str)
-			return (char *)str + str_len - 1;
-		str_len--;
+		write(fd, &s[i], 1);
+		i++;
 	}
-	
-    return NULL;  // Si no se encuentra el carácter
 }
+
+/*int main ()
+{
+	char *str = "Hola, mundo!"; 
+	ft_putstr_fd(str, 1);
+	return (0);
+}*/
