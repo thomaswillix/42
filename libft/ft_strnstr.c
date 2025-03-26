@@ -12,25 +12,24 @@
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char    *ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t i;
-	size_t	j;
+        size_t  i;
+        size_t  j;
 
-	i = 0;
-	j = 0;
-	if (!*little)
-		return (char*)big;
-	while (big[i] && i < len)
-	{
-		j = 0;
-		while (big[i + j] && little[j] && (i + j) < len && big[i + j] == little[j])
-            j++;
-        
-        if (!little[j]) // Si hemos recorrido todo `little`, significa que encontramos la subcadena
-            return (char *)(big + i);
-
-        i++;
-	}
-	return (NULL); // if little	occurs nowhere in big, NULL is returned;
+        i = 0;
+        j = 0;
+        if (!*little)
+                return ((char *) big);
+        while (big[i] && i < len)
+        {
+                j = 0;
+                while (big[i + j] && little[j] && (i - j) < len && big[i + j]
+                        == little[j])
+                        j++;
+                if (!little[j])
+                        return ((char *)(big + i));
+                i++;
+        }
+        return (NULL);
 }
