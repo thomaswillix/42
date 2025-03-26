@@ -6,7 +6,7 @@
 /*   By: tfreitas <tfreitas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 12:29:20 by tfreitas          #+#    #+#             */
-/*   Updated: 2025/03/02 16:08:46 by tfreitas         ###   ########.fr       */
+/*   Updated: 2025/03/27 00:27:32 by tfreitas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,15 @@ static int      count_words(char const *str, char c)
         int     count;
         int     i;
 
-        count = 1;
+        count = 0;
         i = 0;
         while (str[i])
         {
-                if (str[i] == c)
-                        count++;
-                i++;
+                while (str[i] == c)
+					i++;
+                if(str[i] != c)
+					count++;
+				i++;
         }
         return (count);
 }
