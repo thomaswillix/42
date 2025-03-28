@@ -3,26 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfreitas <tfreitas@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: tfreitas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/09 21:50:06 by tfreitas          #+#    #+#             */
-/*   Updated: 2025/03/02 21:19:24 by tfreitas         ###   ########.fr       */
+/*   Created: 2025/03/25 20:02:45 by tfreitas          #+#    #+#             */
+/*   Updated: 2025/03/25 20:07:59 by tfreitas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int search_str)
+char	*ft_strchr(const char *str, int c)
 {
-	while(*str)
+	while (*str)
 	{
-		if(*str == search_str)
-			return (char *)str;
-		str++
+		if (*str == c)
+			return ((char *) str);
+		str++;
 	}
-	// Si buscamos el carácter nulo '\0'
-    if (search_str == '\0')
-        return (char *)str;
-
-    return NULL;  // Si no se encuentra el carácter
+	if (c == '\0')
+		return ((char *) str);
+	return (NULL);
 }

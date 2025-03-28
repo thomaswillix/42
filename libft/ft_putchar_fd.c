@@ -3,17 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfreitas <tfreitas@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: tfreitas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/02 16:15:14 by tfreitas          #+#    #+#             */
-/*   Updated: 2025/03/02 16:18:29 by tfreitas         ###   ########.fr       */
+/*   Created: 2025/03/25 19:14:14 by tfreitas          #+#    #+#             */
+/*   Updated: 2025/03/25 19:15:45 by tfreitas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
-
-void ft_putchar_fd(char c, int fd);
 
 void	ft_putchar_fd(char c, int fd)
 {

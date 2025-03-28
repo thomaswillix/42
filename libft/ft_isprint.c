@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfreitas <tfreitas@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: tfreitas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/09 11:26:48 by tfreitas          #+#    #+#             */
-/*   Updated: 2025/02/09 12:21:49 by tfreitas         ###   ########.fr       */
+/*   Created: 2025/03/25 18:33:32 by tfreitas          #+#    #+#             */
+/*   Updated: 2025/03/25 18:35:05 by tfreitas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isprint(char c)
+int	ft_isprint(char c)
 {
-	return (c >= ' ' && c <= '~')
+	return (c >= ' ' && c <= '~');
 }

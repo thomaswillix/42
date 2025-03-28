@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfreitas <tfreitas@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: tfreitas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/09 14:24:41 by tfreitas          #+#    #+#             */
-/*   Updated: 2025/02/09 21:17:15 by tfreitas         ###   ########.fr       */
+/*   Created: 2025/03/25 20:30:06 by tfreitas          #+#    #+#             */
+/*   Updated: 2025/03/25 20:34:13 by tfreitas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,13 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	size_t	i;
 	size_t	res;
 
-	i = ft_strlen(src);
-	res = i;
-    // Copiar hasta 'size - 1' caracteres de 'src' a 'dest', dejando espacio para el terminador nulo
-    i = 0;
-    while (i < size - 1 && src[i])  // Copiar hasta el tamaño especificado o el final de 'src'
-    {
-        dest[i] = src[i];
-        i++;
-    }
+	res = ft_strlen(src);
+	i = 0;
+	while (i < size - 1 && src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
 	dest[i] = '\0';
-
-    return (res);
+	return (res);
 }

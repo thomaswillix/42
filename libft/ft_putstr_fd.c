@@ -3,19 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfreitas <tfreitas@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: tfreitas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/02 16:16:51 by tfreitas          #+#    #+#             */
-/*   Updated: 2025/03/02 19:35:04 by tfreitas         ###   ########.fr       */
+/*   Created: 2025/03/25 19:44:53 by tfreitas          #+#    #+#             */
+/*   Updated: 2025/03/25 19:48:20 by tfreitas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-void ft_putstr_fd(char *s, int fd);
-
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
@@ -26,10 +24,3 @@ void ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-
-/*int main ()
-{
-	char *str = "Hola, mundo!"; 
-	ft_putstr_fd(str, 1);
-	return (0);
-}*/
