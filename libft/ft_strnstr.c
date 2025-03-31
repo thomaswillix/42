@@ -6,30 +6,31 @@
 /*   By: tfreitas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 20:42:02 by tfreitas          #+#    #+#             */
-/*   Updated: 2025/03/26 21:02:24 by tfreitas         ###   ########.fr       */
+/*   Updated: 2025/03/31 21:08:23 by tfreitas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 {
 	size_t	i;
 	size_t	j;
 
 	i = 0;
 	j = 0;
-	if (!*little)
-		return ((char *) big);
-	while (big[i] && i < len)
+	if (!*to_find)
+		return ((char *)str);
+	while (str[i] && i < n)
 	{
 		j = 0;
-		while (big[i + j] && little[j] && (i - j) < len && big[i + j]
-			== little[j])
+		while (str[i + j] && to_find[j] && i + j < n)
+		{
+			if (!to_find[j + 1])
+				return ((char *)(str + i));
 			j++;
-		if (!little[j])
-			return ((char *)(big + i));
+		}
 		i++;
 	}
-	return (NULL);
+	return (0);
 }

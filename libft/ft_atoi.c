@@ -6,7 +6,7 @@
 /*   By: tfreitas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 18:13:38 by tfreitas          #+#    #+#             */
-/*   Updated: 2025/03/25 18:15:31 by tfreitas         ###   ########.fr       */
+/*   Updated: 2025/03/31 21:10:52 by tfreitas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ int	ft_atoi(const char *nptr)
 	{
 		if (*nptr == '-')
 			sign *= -1;
-		*nptr++;
+		nptr++;
 	}
 	while (*nptr >= '0' && *nptr <= '9')
 	{
 		n = (*nptr - '0') + n * 10;
-		*nptr++;
+		nptr++;
 	}
-	return (n);
+	return (n * sign);
 }

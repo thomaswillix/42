@@ -6,24 +6,22 @@
 /*   By: tfreitas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 20:49:14 by tfreitas          #+#    #+#             */
-/*   Updated: 2025/03/25 20:54:08 by tfreitas         ###   ########.fr       */
+/*   Updated: 2025/03/31 21:05:14 by tfreitas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int search_str)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	str_len;
+	size_t	i;
 
-	str_len = ft_strlen(str);
-	if (search_str == '\0')
-		return ((char *)str + str_len);
-	while (str_len > 0)
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
-		if (str[str_len - 1] == search_str)
-			return ((char *) str + str_len - 1);
-		str_len--;
+		if (s[i] == (char)c)
+			return ((char *)s + i);
+		i--;
 	}
-	return (NULL);
+	return (0);
 }

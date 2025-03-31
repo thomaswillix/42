@@ -6,35 +6,32 @@
 /*   By: tfreitas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 20:13:35 by tfreitas          #+#    #+#             */
-/*   Updated: 2025/03/26 19:02:47 by tfreitas         ###   ########.fr       */
+/*   Updated: 2025/03/31 19:28:34 by tfreitas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*Este seguramente falle porque cuando le paso el puntero a la funcion 
- * para calcular la longitud muevo la posición de dicho puntero*/
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	s1_len;
-	size_t	s2_len;
+	size_t	total_len;
+	size_t	j;
 	size_t	i;
 	char	*str;
 
-	s1_len = ft_strlen(s1);
-	s2_len = ft_strlen(s2);
-	str = (char *) malloc(sizeof(*s1) * (s1_len + s2_len + 1));
 	i = 0;
-	while (s1[i])
+	j = 0;
+	total_len = ft_strlen(s1) + ft_strlen(s2) + 1;
+	str = (char *)malloc(total_len);
+	if (!str)
+		return (NULL);
+	while ((i <= (total_len - 1)) && s1[i] != '\0')
 	{
 		str[i] = s1[i];
 		i++;
 	}
-	while (*s2 != '\0')
-	{
-		str[i] = *s2;
-		s2++;
-		i++;
-	}
+	while ((i < total_len - 1) && s2[j] != '\0')
+		str[i++] = s2[j++];
 	str[i] = '\0';
 	return (str);
 }

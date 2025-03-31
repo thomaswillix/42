@@ -6,7 +6,7 @@
 /*   By: tfreitas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 19:44:53 by tfreitas          #+#    #+#             */
-/*   Updated: 2025/03/25 19:48:20 by tfreitas         ###   ########.fr       */
+/*   Updated: 2025/03/31 20:23:07 by tfreitas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,9 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
+	while (*s)
 	{
-		write(fd, &s[i], 1);
-		i++;
+		write(fd, s, 1);
+		s++;
 	}
 }

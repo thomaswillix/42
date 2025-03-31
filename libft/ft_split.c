@@ -6,7 +6,7 @@
 /*   By: tfreitas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 19:53:19 by tfreitas          #+#    #+#             */
-/*   Updated: 2025/03/27 21:19:46 by tfreitas         ###   ########.fr       */
+/*   Updated: 2025/03/31 21:31:48 by tfreitas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,6 @@ static void	fill_words(char **result, char const *str, char c)
 		}
 		i++;
 	}
-	result[j] = '\0';
 }
 
 char	**ft_split(char const *s, char c)

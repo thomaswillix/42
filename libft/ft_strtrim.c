@@ -6,11 +6,14 @@
 /*   By: tfreitas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 21:01:45 by tfreitas          #+#    #+#             */
-/*   Updated: 2025/03/26 19:05:21 by tfreitas         ###   ########.fr       */
+/*   Updated: 2025/03/31 21:17:29 by tfreitas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char     *new_str(char const *s1, size_t start, size_t len);
+static int      to_trim(char const *set, char c);
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

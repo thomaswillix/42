@@ -6,7 +6,7 @@
 /*   By: tfreitas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 19:16:13 by tfreitas          #+#    #+#             */
-/*   Updated: 2025/03/25 19:18:58 by tfreitas         ###   ########.fr       */
+/*   Updated: 2025/03/31 20:36:37 by tfreitas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	char	end_l;
-
-	end_l = '\n';
 	ft_putstr_fd(s, fd);
-	write(fd, &end_l, 1);
+	ft_putchar_fd('\n', fd);
 }
