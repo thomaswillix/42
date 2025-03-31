@@ -1,9 +1,0 @@
-Falta esto:
-
-	• mirar calloc y su comportamiento para fiarme de lo que tengo escrito
-
-Me quedan estos:
-	• ft_split.c
-	• ft_itoa.c 
-	• ft_strieri.c 
-	• ft_strmapi
